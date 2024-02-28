@@ -66,10 +66,10 @@ const images = [
 
    const searchImg = document.querySelector(".gallery");
    const imgGallery = images.map((image)=>
-    `<li class="gallery-item">
-  <a class="gallery-link" href="${image.preview}">
+    `<li class="gallery_item">
+  <a class="gallery_link" href="${image.preview}">
     <img
-      class="gallery-image"
+      class="gallery_image"
       src="${image.preview}"
       data-source="${image.original}"
       alt="${image.description}"
@@ -83,10 +83,10 @@ searchImg.insertAdjacentHTML("beforeend", imgGallery);
 searchImg.addEventListener("click", (eve) => {
 if(eve.target === eve.currentTarget) return;
 basicLightbox.create(`
-  <li class="gallery-item">
-  <a class="gallery-link" href="${image.preview}">
+  <li class="gallery_item">
+  <a class="gallery_link" href="${image.preview}">
     <img
-      class="gallery-image"
+      class="gallery_image"
       src="${image.preview}"
       data-source="${image.original}"
       alt="${image.description}"
