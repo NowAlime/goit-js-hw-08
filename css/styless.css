@@ -4,7 +4,7 @@ body {
   }
   .gallery {
     list-style: none;
-    width: 1128px;
+    width: 1440px;
     height: auto;
     display: flex;
     flex-wrap: wrap;

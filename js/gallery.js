@@ -83,7 +83,8 @@ searchImg.insertAdjacentHTML("beforeend", imgGallery);
 searchImg.addEventListener("click", (eve) => {
 if(eve.target === eve.currentTarget) return;
 const imageSrc = eve.target.dataset.source;
-const instance = basicLightbox.create(`
+const instance = basicLightbox.create
+(`
   <img src="${imageSrc}">
 `);
 instance.show();
