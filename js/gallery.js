@@ -82,8 +82,5 @@ searchImg.insertAdjacentHTML("beforeend", imgGallery);
 
 searchImg.addEventListener("click", (eve) => {
     if(eve.target === eve.currentTarget) return;
-
-    const largeImg = eve.target.dataset.source;
-
-    basicLightbox.create(`<img src="${largeImg}">`).show();
+    basicLightbox.create(`<img src="${id}">`).show();
     });
