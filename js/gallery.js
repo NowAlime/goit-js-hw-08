@@ -82,5 +82,17 @@ searchImg.insertAdjacentHTML("beforeend", imgGallery);
 
 searchImg.addEventListener("click", (eve) => {
     if(eve.target === eve.currentTarget) return;
-    basicLightbox.create(`<img src="${id}">`).show();
-    });
+  const instance = basicLightbox.create(
+  `<li class="gallery-item">
+  <a class="gallery-link" href="${image.preview}">
+    <img
+      class="gallery-image"
+      src="${image.preview}"
+      data-source="${image.original}"
+      alt="${image.description}"
+    />
+  </a>
+</li>`);
+
+instance.show();})
+    
