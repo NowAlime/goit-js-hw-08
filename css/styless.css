@@ -4,10 +4,13 @@ body {
   }
   .gallery {
     list-style: none;
+    width: 1128px;
+    height: auto;
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    gap: 12px;
+    column-gap: 18px;
+    row-gap: 18px;
   }
   
  

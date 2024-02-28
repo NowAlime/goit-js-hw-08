@@ -66,23 +66,22 @@ const images = [
 
    const searchImg = document.querySelector(".gallery");
    const imgGallery = images.map((image)=>
-   `<li class="gallery_item">
-     <a class="gallery_link"
-      href="${image.preview}">
-       <img class="gallery_image" 
-       src="${image.original}" 
-       data-source="${image.original}" 
-       alt="${image.description}">
-     </a>
-   </li>`
- ).join("");
+    `<li class="gallery-item">
+  <a class="gallery-link" href="${image.preview}">
+    <img
+      class="gallery-image"
+      src="${image.preview}"
+      data-source="${image.original}"
+      alt="${image.description}"
+    />
+  </a>
+</li>`).join("");
 
 
 searchImg.insertAdjacentHTML("beforeend", imgGallery);
 
 searchImg.addEventListener("click", (eve) => {
-    eve.preventDefault();
-    if(eve.target.nodeName !=="IMG") return;
+    if(eve.target === eve.currentTarget) return;
 
 
 const largeImg = eve.target.dataset.source;
