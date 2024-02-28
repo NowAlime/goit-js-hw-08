@@ -81,9 +81,9 @@ const images = [
 searchImg.insertAdjacentHTML("beforeend", imgGallery);
 
 searchImg.addEventListener("click", (eve) => {
-    if(eve.target === eve.currentTarget) return;
-  const instance = basicLightbox.create(
-  `<li class="gallery-item">
+if(eve.target === eve.currentTarget) return;
+basicLightbox.create(`
+  <li class="gallery-item">
   <a class="gallery-link" href="${image.preview}">
     <img
       class="gallery-image"
@@ -92,7 +92,7 @@ searchImg.addEventListener("click", (eve) => {
       alt="${image.description}"
     />
   </a>
-</li>`);
-
+</li>
+  `)
 instance.show();})
-    
+
